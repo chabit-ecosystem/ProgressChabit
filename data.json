@@ -1,0 +1,49 @@
+{
+  "CRMCPageAmmount": 10,
+  "CRMCompletedPages": 8,
+  "CRMReady": 6,
+  "CHBPageAmmount": 10,
+  "CHBCompletedPages": 9,
+  "CHBReady": 4,
+
+  "lastAvance": [
+    "Creación de wireframe CRM"
+  ],
+
+  "actualPages": [
+    "DdC CRM?",
+    "DdC CHB?",
+    "CRM ?",
+    "CHB ?"
+  ],
+
+  "utilLink": [
+    {
+      "link": "https://www.figma.com/design/JgrXL5YASashMV0TYSUSE0/CRM?node-id=1912-32165&p=f&t=lY88cMUvoLt1lIgr-0",
+      "linkName": "Figma"
+    },
+    {
+      "link": "#",
+      "linkName": "Expo CRM"
+    },
+    {
+      "link": "#",
+      "linkName": "Expo CHB"
+    }
+  ],
+
+  "blocks": [
+    {
+      "block": "Definir cuando generar KYC y KYB",
+      "blockAffection": "Afecta pruebas de ejecuciones con saldos"
+    },
+    {
+      "block": "Confirmar simulador de iphone",
+      "blockAffection": "Afecta al maquetado en general"
+    },
+    {
+      "block": "Definir preguntas legales",
+      "blockAffection": "Afecta principalmente limitaciones en compra/venta en general"
+    }
+  ]
+}

@@ -11,182 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-
-    <style>
-      :root {
-        --bg: #111315;
-        --surface: #1a1d21;
-        --surface-hover: #24282e;
-        --border: #2e343b;
-
-        --text: #f6f3ee;
-        --text-secondary: #a8adb5;
-
-        --gold: #c8a96b;
-        --gold-hover: #d9b97a;
-
-        --success: #3fbf75;
-        --danger: #e5484d;
-      }
-
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        background: var(--bg);
-        color: var(--text);
-        font-family: 'Inter', sans-serif;
-        padding: 40px;
-      }
-
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-      }
-
-      header {
-        margin-bottom: 40px;
-      }
-
-      h1 {
-        font-size: 2.5rem;
-        font-weight: 700;
-        margin-bottom: 8px;
-      }
-
-      .subtitle {
-        color: var(--text-secondary);
-      }
-
-      .card {
-        background: var(--surface);
-        border: 1px solid var(--border);
-        border-radius: 16px;
-        padding: 24px;
-        margin-bottom: 24px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-      }
-
-      .section-title {
-        font-size: 1.2rem;
-        font-weight: 600;
-        margin-bottom: 24px;
-      }
-
-      .progress-item {
-        margin-bottom: 28px;
-      }
-
-      .progress-header {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 10px;
-      }
-
-      .progress-label {
-        font-weight: 500;
-      }
-
-      .progress-value {
-        color: var(--gold);
-        font-weight: 600;
-      }
-
-      .progress-track {
-        width: 100%;
-        height: 12px;
-        background: var(--surface-hover);
-        border-radius: 999px;
-        overflow: hidden;
-      }
-
-      .progress-bar {
-        height: 100%;
-        border-radius: 999px;
-        background: linear-gradient(90deg, var(--gold), var(--gold-hover));
-      }
-
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        gap: 24px;
-      }
-
-      .last-update {
-        padding: 18px;
-        border-left: 4px solid var(--gold);
-        background: rgba(200, 169, 107, 0.08);
-        border-radius: 12px;
-        color: var(--text-secondary);
-        line-height: 1.6;
-      }
-
-      .screen-list {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-      }
-
-      .screen-item {
-        background: var(--surface-hover);
-        padding: 14px;
-        border-radius: 12px;
-      }
-
-      .links {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-      }
-
-      .link-btn {
-        text-decoration: none;
-        color: var(--text);
-        border: 1px solid var(--border);
-        background: var(--surface-hover);
-        padding: 12px 16px;
-        border-radius: 12px;
-        transition: 0.2s;
-      }
-
-      .link-btn:hover {
-        border-color: var(--gold);
-        color: var(--gold);
-      }
-
-      .pending-list {
-        display: flex;
-        flex-direction: column;
-        gap: 14px;
-      }
-
-      .pending-item {
-        border-left: 4px solid var(--danger);
-        background: rgba(229, 72, 77, 0.08);
-        padding: 14px;
-        border-radius: 12px;
-      }
-
-      .pending-title {
-        font-weight: 600;
-        margin-bottom: 6px;
-      }
-
-      .pending-impact {
-        color: var(--text-secondary);
-        font-size: 0.95rem;
-      }
-
-      footer {
-        margin-top: 30px;
-        text-align: center;
-        color: var(--text-secondary);
-        font-size: 0.9rem;
-      }
-    </style>
+    <link rel="stylesheet" href="./index.css" />
   </head>
 
   <body>
@@ -198,109 +23,36 @@
 
       <div class="card">
         <h2 class="section-title">Avances Generales</h2>
-
-        <div class="progress-item">
-          <div class="progress-header">
-            <span class="progress-label"> Desarrollo de concepto de CRM </span>
-            <span class="progress-value">80%</span>
-          </div>
-          <div class="progress-track">
-            <div class="progress-bar" style="width: 80%"></div>
-          </div>
-        </div>
-
-        <div class="progress-item">
-          <div class="progress-header">
-            <span class="progress-label"> CRM </span>
-            <span class="progress-value">65%</span>
-          </div>
-          <div class="progress-track">
-            <div class="progress-bar" style="width: 65%"></div>
-          </div>
-        </div>
-
-        <div class="progress-item">
-          <div class="progress-header">
-            <span class="progress-label"> Desarrollo de concepto CHB </span>
-            <span class="progress-value">90%</span>
-          </div>
-          <div class="progress-track">
-            <div class="progress-bar" style="width: 90%"></div>
-          </div>
-        </div>
-
-        <div class="progress-item">
-          <div class="progress-header">
-            <span class="progress-label">CHB </span>
-            <span class="progress-value">40%</span>
-          </div>
-          <div class="progress-track">
-            <div class="progress-bar" style="width: 40%"></div>
-          </div>
-        </div>
+        <div id="progress-container"></div>
       </div>
 
       <div class="grid">
         <div class="card">
           <h2 class="section-title">Último avance</h2>
-
-          <div class="last-update">Creación de wireframe CRM</div>
+          <div class="last-update" id="last-avance-container"></div>
         </div>
 
         <div class="card">
           <h2 class="section-title">Pantallas actuales</h2>
-
-          <div class="screen-list">
-            <div class="screen-item">DdC CRM?</div>
-            <div class="screen-item">DdC CHB?</div>
-            <div class="screen-item">CRM ?</div>
-            <div class="screen-item">CHB ?</div>
-          </div>
+          <div class="screen-list" id="actual-pages-container"></div>
         </div>
       </div>
 
       <div class="card">
         <h2 class="section-title">Links útiles</h2>
-
-        <div class="links">
-          <a
-            href="https://www.figma.com/design/JgrXL5YASashMV0TYSUSE0/CRM?node-id=1912-32165&p=f&t=lY88cMUvoLt1lIgr-0"
-            class="link-btn"
-            >Figma</a
-          >
-          <a href="#" class="link-btn">Expo CRM</a>
-          <a href="#" class="link-btn">Expo CHB</a>
-        </div>
+        <div class="links" id="links-container"></div>
       </div>
 
       <div class="card">
         <h2 class="section-title">
           Pendientes inamovibles (dependen de terceros)
         </h2>
-
-        <div class="pending-list">
-          <div class="pending-item">
-            <div class="pending-title">Definir cuando generar KYC y KYB</div>
-            <div class="pending-impact">
-              Afecta pruebas de ejecuciones con saldos
-            </div>
-          </div>
-
-          <div class="pending-item">
-            <div class="pending-title">Confirmar simulador de iphone</div>
-            <div class="pending-impact">Afecta al maquetado en general</div>
-          </div>
-
-          <div class="pending-item">
-            <div class="pending-title">Definir preguntas legales</div>
-            <div class="pending-impact">
-              Afecta principalmente limitaciones en compra/venta en general
-            </div>
-          </div>
-        </div>
+        <div class="pending-list" id="blocks-container"></div>
       </div>
 
       <footer>Chabit Progress Dashboard</footer>
     </div>
+
+    <script src="./main.js"></script>
   </body>
 </html>
